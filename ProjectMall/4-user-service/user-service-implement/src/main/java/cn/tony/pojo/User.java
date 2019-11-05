@@ -1,6 +1,7 @@
 package cn.tony.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +10,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Table(name = "tb_user")
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
