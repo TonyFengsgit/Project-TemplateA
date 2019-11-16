@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="item-service-implement" />
-        <module name="user-service-interface" />
+        <module name="user-service-implement" />
         <module name="item-service-interface" />
         <module name="2-gateway" />
-        <module name="user-service-implement" />
-        <module name="1-server-register" />
+        <module name="item-service-implement" />
+        <module name="user-service-interface" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="1-registy-server" target="1.8" />
+      <module name="1-server-register" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="1-registy-server" options="-parameters" />
       <module name="1-server-register" options="-parameters" />
       <module name="2-gateway" options="-parameters" />
       <module name="3-item-service" options="-parameters" />

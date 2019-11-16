@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+
+
+
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script>
+    function xxx(){
+            $.ajax({
+                    type: "get",
+                    url: "http://192.168.0.110:8083/user/4",
+                    dataType: "json",
+                    data: {"key":"value"},
+                    headers : {
+                        'token':123
+                    },
+                    success: function(data){ alert("访问成功"); },
+                    error: function(data){ alert("error"); }
+            });
+    }
+
+</script>
+
+<body>
+<h3>首页</h3>
+<h4><a href="http://192.168.0.110:8084/user/find/?username=admin">http://192.168.124.7:8084/user/find/?username=admin</a></h4>
+<h4><a href="http://192.168.0.110:8083/user/4">http://192.168.0.110:8083/user/4</a></h4>
+
+<div id="demo">
+    <h1>The XMLHttpRequest Object</h1>
+    <button type="button" onclick="xxx()">请求item服务</button>
+</div>
+
+<script>
+
+</script>
+
+</body>
+
+</html>

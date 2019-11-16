@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>1-server-register</module>
+     <!--   <module>1-server-register</module>-->
         <module>2-gateway</module>
         <module>3-item-service</module>
         <module>4-user-service</module>
@@ -78,6 +78,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+       
+    </dependencies>
 
    <!--最好不要在父工程加打包依赖，否则对于那些没有主函数main的子项目就包打包异常，单独在需要打包的项目中加插件
    <build>

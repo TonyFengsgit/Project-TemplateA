@@ -1,6 +1,6 @@
 package cn.tony.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;
@@ -10,26 +10,19 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "tb_user")
 @Data
-public class User implements Serializable {
+@Table(name = "tb_user_info")
+public class UserInfo implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Long userId;
-
     private String username;// 用户名
+    private String userAgent;
+    private String ip;
+    private String url;
+    private Date created;
 
-    @JsonIgnore
-    private String password;// 密码
 
-    private String phone;// 电话
-
-    private Date created;// 创建时间
-
-    private Integer state;
-
-    @JsonIgnore
-    private String salt;// 密码的盐值
 }
